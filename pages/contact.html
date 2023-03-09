@@ -7,7 +7,14 @@
   <title>contact</title>
 </head>
 <body>
-    
+    <?php
+if (isset($_POST["nom"]) && isset($_POST["prenom"])) {
+    $nom = $_POST["nom"];
+    $prenom = $_POST["prenom"];
+    // traitement des données (enregistrement dans une base de donnée, envoie d'un email, ...)
+    echo "Bonjour $prenom $nom";
+}
+?>
     <div class="contact-wrapper">
       <h1>Posez-moi vos questions</h1>
       <a href="../index.html">Retour à la page d'accueil</a>
